@@ -16,9 +16,10 @@ database.sqlite
 .env
 .env.*
 
-
-
-
+# Local IDE / AI tooling
+.cursor/
+.gemini/
+.idea/
 
 /extensions/*/dist
 
