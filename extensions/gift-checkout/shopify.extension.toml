@@ -1,0 +1,24 @@
+api_version = "2026-07"
+
+[[extensions]]
+name = "Free gift"
+handle = "gift-checkout"
+type = "ui_extension"
+uid = "60b2aa2b-dcdc-5a6b-7ea3-b1ca80f2175ffbe48229"
+
+# Optional merchant placement in Checkout Editor
+[[extensions.targeting]]
+module = "./src/Checkout.js"
+target = "purchase.checkout.block.render"
+
+# Always visible under cart lines — no Editor add required
+[[extensions.targeting]]
+module = "./src/CheckoutCartLines.js"
+target = "purchase.checkout.cart-line-list.render-after"
+
+[extensions.capabilities]
+api_access = true
+
+[[extensions.metafields]]
+namespace = "$app"
+key = "tier_rules"

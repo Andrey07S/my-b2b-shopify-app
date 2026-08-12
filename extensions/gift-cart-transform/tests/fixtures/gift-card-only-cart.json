@@ -1,0 +1,40 @@
+{
+  "payload": {
+    "export": "cart-transform-run",
+    "target": "cart.transform.run",
+    "input": {
+      "cart": {
+        "attribute": {
+          "value": "gid://shopify/ProductVariant/99"
+        },
+        "lines": [
+          {
+            "id": "gid://shopify/CartLine/1",
+            "quantity": 7,
+            "cost": {
+              "amountPerQuantity": { "amount": "700.0" },
+              "subtotalAmount": { "amount": "4900.0" }
+            },
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "id": "gid://shopify/ProductVariant/50",
+              "product": { "isGiftCard": true }
+            }
+          }
+        ]
+      },
+      "shop": {
+        "metafield": {
+          "jsonValue": {
+            "active": true,
+            "giftThreshold": 100,
+            "giftVariantIds": ["gid://shopify/ProductVariant/99"]
+          }
+        }
+      }
+    },
+    "output": {
+      "operations": []
+    }
+  }
+}

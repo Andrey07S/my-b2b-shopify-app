@@ -1,0 +1,33 @@
+query CartTransformRunInput {
+  cart {
+    attribute(key: "gift_variant_id") {
+      value
+    }
+    lines {
+      id
+      quantity
+      cost {
+        amountPerQuantity {
+          amount
+        }
+        subtotalAmount {
+          amount
+        }
+      }
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          product {
+            isGiftCard
+          }
+        }
+      }
+    }
+  }
+  shop {
+    metafield(namespace: "$app", key: "tier_rules") {
+      jsonValue
+    }
+  }
+}

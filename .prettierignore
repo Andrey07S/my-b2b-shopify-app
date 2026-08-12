@@ -1,0 +1,15 @@
+package.json
+package-lock.json
+pnpm-lock.yaml
+.shadowenv.d
+.vscode
+node_modules
+prisma
+public
+.shopify
+.react-router
+build
+extensions/**/dist
+extensions/**/generated
+extensions/**/node_modules
+*.md

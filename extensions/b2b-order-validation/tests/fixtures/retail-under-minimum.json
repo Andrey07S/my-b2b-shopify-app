@@ -1,0 +1,30 @@
+{
+  "payload": {
+    "export": "cart-validations-generate-run",
+    "target": "cart.validations.generate.run",
+    "input": {
+      "buyerJourney": {
+        "step": "CHECKOUT_INTERACTION"
+      },
+      "cart": {
+        "lines": [{ "id": "gid://shopify/CartLine/1" }],
+        "cost": { "subtotalAmount": { "amount": "50.0" } },
+        "buyerIdentity": { "customer": { "hasAnyTag": false } }
+      },
+      "shop": {
+        "metafield": {
+          "jsonValue": { "active": true, "b2bMinOrder": 200 }
+        }
+      }
+    },
+    "output": {
+      "operations": [
+        {
+          "validationAdd": {
+            "errors": []
+          }
+        }
+      ]
+    }
+  }
+}

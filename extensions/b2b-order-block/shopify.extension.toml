@@ -1,0 +1,11 @@
+api_version = "2025-10"
+
+[[extensions]]
+name = "b2b-order-block"
+handle = "b2b-order-block"
+type = "ui_extension"
+uid = "8bc24f3e-f7b5-c773-7f4b-fa11a436683f6f66b48a"
+
+[[extensions.targeting]]
+module = "./src/BlockExtension.js"
+target = "admin.order-details.block.render"

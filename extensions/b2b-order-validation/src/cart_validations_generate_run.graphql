@@ -1,0 +1,25 @@
+query CartValidationsGenerateRunInput {
+  buyerJourney {
+    step
+  }
+  cart {
+    lines {
+      id
+    }
+    cost {
+      subtotalAmount {
+        amount
+      }
+    }
+    buyerIdentity {
+      customer {
+        hasAnyTag(tags: ["b2b"])
+      }
+    }
+  }
+  shop {
+    metafield(namespace: "$app", key: "tier_rules") {
+      jsonValue
+    }
+  }
+}

@@ -1,0 +1,36 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "7f5097aeb50e0cc7740e7a73d39aaff4"
+name = "my-b2b-smart-app"
+application_url = "https://example.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2026-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[access.admin]
+direct_api_mode = "offline"
+embedded_app_direct_api_access = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_discounts,read_orders,read_products,read_validations,write_cart_transforms,write_customers,write_discounts,write_validations"
+
+[auth]
+redirect_urls = [ "https://example.com/api/auth" ]
+
+[shop.metafields.app.tier_rules]
+type = "json"
+name = "B2B Tier Rules"
+description = "Snapshot of discount/gift/B2B rules for Functions and extensions"
+
+  [shop.metafields.app.tier_rules.access]
+  admin = "merchant_read"
+  storefront = "public_read"

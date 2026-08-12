@@ -1,0 +1,11 @@
+api_version = "2025-10"
+
+[[extensions]]
+name = "b2b-customer-block"
+handle = "b2b-customer-block"
+type = "ui_extension"
+uid = "b28148c8-bd3b-3ac6-efe9-a1656f9b158e496f0311"
+
+[[extensions.targeting]]
+module = "./src/BlockExtension.js"
+target = "admin.customer-details.block.render"

@@ -1,0 +1,30 @@
+{
+  "payload": {
+    "export": "cart-validations-generate-run",
+    "target": "cart.validations.generate.run",
+    "input": {
+      "buyerJourney": {
+        "step": "CART_INTERACTION"
+      },
+      "cart": {
+        "lines": [],
+        "cost": { "subtotalAmount": { "amount": "0.0" } },
+        "buyerIdentity": { "customer": { "hasAnyTag": true } }
+      },
+      "shop": {
+        "metafield": {
+          "jsonValue": { "active": true, "b2bMinOrder": 200 }
+        }
+      }
+    },
+    "output": {
+      "operations": [
+        {
+          "validationAdd": {
+            "errors": []
+          }
+        }
+      ]
+    }
+  }
+}
