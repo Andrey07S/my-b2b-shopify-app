@@ -48,7 +48,7 @@ Press **P** to open the app URL, install on the store, then in App Home:
 
 One environment. App Home on Render; extensions/functions via Shopify CDN.
 
-1. Deploy Blueprint / Docker service from this repo (`render.yaml`).
+1. Render: Free **Postgres** + Free **Web Service** (Docker, this repo).
 2. Set `SHOPIFY_API_KEY`, `SHOPIFY_API_SECRET`, `SHOPIFY_APP_URL` (= Render URL), `DATABASE_URL`.
 3. Put the same Render URL into `shopify.app.toml` (`application_url` + `auth.redirect_urls`).
 4. `shopify app deploy` → Release → install / Activate on the store.
