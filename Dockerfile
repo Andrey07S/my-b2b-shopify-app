@@ -8,11 +8,13 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 COPY package.json package-lock.json* ./
+COPY extensions ./extensions
 
-RUN npm ci --omit=dev && npm cache clean --force
+# vite/typescript are in devDependencies but required to build
+RUN npm ci && npm cache clean --force
 
 COPY . .
 
-RUN npm run build
+RUN npx prisma generate && npm run build
 
 CMD ["npm", "run", "docker-start"]
